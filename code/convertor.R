@@ -1,6 +1,6 @@
 library(igraph)
 
-graph_edges <- read.csv(file = "./csv/hep-ph/edges.csv", header = TRUE)
+graph_edges <- read.csv(file = "./csv/deezer/edges.csv", header = TRUE)
 
 graph <- graph_from_data_frame(graph_edges, directed = FALSE)
 graph <- simplify(graph, remove.multiple = TRUE, remove.loops = TRUE)
@@ -13,4 +13,6 @@ if (!is.connected(graph)) {
 
 E(graph)$weight <- runif(n = length(E(graph)), min = 0, max = 1)
 
-save(graph, file = "./graph/HepPh.RData")
+cat(sprintf("Nodes: %s\nEdges: %s\n", length(V(graph)), length(E(graph))))
+
+save(graph, file = "./graphs/Deezer.RData")
