@@ -1,9 +1,13 @@
 library(igraph)
 
-graph_edges <- read.csv(file = "./csv/deezer/edges.csv", header = TRUE)
+graph_edges <- read.csv(file = "./csv/MathOverflow/edges.csv", header = TRUE)
 
-graph <- graph_from_data_frame(graph_edges, directed = FALSE)
+graph <- graph_from_data_frame(graph_edges, directed = TRUE)
 graph <- simplify(graph, remove.multiple = TRUE, remove.loops = TRUE)
+
+if (is.directed(graph)) {
+    graph <- as.undirected(graph)
+}
 
 if (!is.connected(graph)) {
     com <- components(graph)
@@ -15,4 +19,7 @@ E(graph)$weight <- runif(n = length(E(graph)), min = 0, max = 1)
 
 cat(sprintf("Nodes: %s\nEdges: %s\n", length(V(graph)), length(E(graph))))
 
-save(graph, file = "./graphs/Deezer.RData")
+save(graph, file = "./graphs/MathOverflow.RData")
+
+# edgelist <- as_edgelist(graph, names = F)
+# write.csv(edgelist, "MathOverflow.csv")
