@@ -20,6 +20,3 @@ E(graph)$weight <- runif(n = length(E(graph)), min = 0, max = 1)
 cat(sprintf("Nodes: %s\nEdges: %s\n", length(V(graph)), length(E(graph))))
 
 save(graph, file = "./graphs/MathOverflow.RData")
-
-# edgelist <- as_edgelist(graph, names = F)
-# write.csv(edgelist, "MathOverflow.csv")
