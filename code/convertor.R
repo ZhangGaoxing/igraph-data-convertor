@@ -15,8 +15,13 @@ if (!is.connected(graph)) {
     graph <- induced_subgraph(graph, gr[[1]])
 }
 
-E(graph)$weight <- runif(n = length(E(graph)), min = 0, max = 1)
+E(graph)$weight <- runif(n = length(E(graph)), min = 0.2, max = 0.8)
 
 cat(sprintf("Nodes: %s\nEdges: %s\n", length(V(graph)), length(E(graph))))
 
 save(graph, file = "./graphs/MathOverflow.RData")
+
+# E-R Random
+graph <- sample_gnp(10000, 1/500)
+E(graph)$weight <- runif(n = length(E(graph)), min = 0.2, max = 0.8)
+save(graph, file = "./graphs/Random.RData")
