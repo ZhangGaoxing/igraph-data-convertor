@@ -23,5 +23,6 @@ save(graph, file = "./graphs/MathOverflow.RData")
 
 # E-R Random
 graph <- sample_gnp(10000, 1/500)
+V(graph)$name <- as.character(V(graph))
 E(graph)$weight <- runif(n = length(E(graph)), min = 0.2, max = 0.8)
 save(graph, file = "./graphs/Random.RData")
