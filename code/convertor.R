@@ -1,6 +1,6 @@
 library(igraph)
 
-graph_edges <- read.csv(file = "./csv/MathOverflow/edges.csv", header = TRUE)
+graph_edges <- read.csv(file = "./csv/WikiVote/edges.csv", header = TRUE)
 
 graph <- graph_from_data_frame(graph_edges, directed = TRUE)
 graph <- simplify(graph, remove.multiple = TRUE, remove.loops = TRUE)
@@ -19,10 +19,10 @@ E(graph)$weight <- runif(n = length(E(graph)), min = 0.2, max = 0.8)
 
 cat(sprintf("Nodes: %s\nEdges: %s\n", length(V(graph)), length(E(graph))))
 
-save(graph, file = "./graphs/MathOverflow.RData")
+save(graph, file = "./graphs/WikiVote.RData")
 
 # E-R Random
-graph <- sample_gnp(10000, 1/500)
-V(graph)$name <- as.character(V(graph))
-E(graph)$weight <- runif(n = length(E(graph)), min = 0.2, max = 0.8)
-save(graph, file = "./graphs/Random.RData")
+# graph <- sample_gnp(10000, 1/500)
+# V(graph)$name <- as.character(V(graph))
+# E(graph)$weight <- runif(n = length(E(graph)), min = 0.2, max = 0.8)
+# save(graph, file = "./graphs/Random.RData")
