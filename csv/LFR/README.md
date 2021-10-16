@@ -6,15 +6,15 @@ n=10000 max-degree=400 min-community=700 max-community=900 µ=0.2 average-degree
 n=12000 max-degree=400 min-community=800 max-community=1000 µ=0.2 average-degree=20
 
 ## LFR 2
-clustering-coefficient=0.2 n=2000 max-degree=200 min-community=200 max-community=400 µ=0.2 average-degree=20
-clustering-coefficient=0.3 n=2000 max-degree=200 min-community=200 max-community=400 µ=0.2 average-degree=20
-clustering-coefficient=0.4 n=2000 max-degree=200 min-community=200 max-community=400 µ=0.2 average-degree=20
-clustering-coefficient=0.5 n=2000 max-degree=200 min-community=200 max-community=400 µ=0.2 average-degree=20
-clustering-coefficient=0.6 n=2000 max-degree=200 min-community=200 max-community=400 µ=0.2 average-degree=20
+clustering-coefficient=0.2 n=2000 max-degree=20 min-community=20 max-community=50 µ=0.2 average-degree=8
+clustering-coefficient=0.3 n=2000 max-degree=20 min-community=20 max-community=50 µ=0.2 average-degree=8
+clustering-coefficient=0.4 n=2000 max-degree=20 min-community=20 max-community=50 µ=0.2 average-degree=8
+clustering-coefficient=0.5 n=2000 max-degree=20 min-community=20 max-community=50 µ=0.2 average-degree=8
+clustering-coefficient=0.6 n=2000 max-degree=20 min-community=20 max-community=50 µ=0.2 average-degree=8
 
 ## LFR 3
-n=4000 max-degree=200 min-community=200 max-community=400 µ=0.2 average-degree=20
-n=4000 max-degree=200 min-community=200 max-community=400 µ=0.2 average-degree=20
-n=4000 max-degree=200 min-community=200 max-community=400 µ=0.2 average-degree=20
-n=4000 max-degree=200 min-community=200 max-community=400 µ=0.2 average-degree=20
-n=4000 max-degree=200 min-community=200 max-community=400 µ=0.2 average-degree=20
+n=2000 max-degree=20 min-community=200 max-community=400 µ=0.2 average-degree=8 clustering-coefficient=0.2
+n=2000 max-degree=20 min-community=200 max-community=400 µ=0.2 average-degree=8 clustering-coefficient=0.2
+n=2000 max-degree=20 min-community=200 max-community=400 µ=0.2 average-degree=8 clustering-coefficient=0.2
+n=2000 max-degree=20 min-community=200 max-community=400 µ=0.2 average-degree=8 clustering-coefficient=0.2
+n=2000 max-degree=20 min-community=200 max-community=400 µ=0.2 average-degree=8 clustering-coefficient=0.2
