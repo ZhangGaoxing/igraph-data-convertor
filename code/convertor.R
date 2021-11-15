@@ -1,6 +1,6 @@
 library(igraph)
 
-graph_edges <- read.csv(file = "./csv/P2P/edges.csv", header = TRUE)
+graph_edges <- read.csv(file = "./csv/PGP/edges.csv", header = TRUE)
 
 graph <- graph_from_data_frame(graph_edges, directed = TRUE)
 graph <- simplify(graph, remove.multiple = TRUE, remove.loops = TRUE)
@@ -19,7 +19,7 @@ E(graph)$weight <- runif(n = length(E(graph)), min = 0.2, max = 0.8)
 
 cat(sprintf("Nodes: %s\nEdges: %s\n", length(V(graph)), length(E(graph))))
 
-save(graph, file = "./graphs/P2P.RData")
+save(graph, file = "./graphs/PGP.RData")
 
 # E-R Random
 # graph <- sample_gnp(5000, 1/1050)
